@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <!-- <style>
+      p {
+        background-color: blue;
+        color: white;
+      }
+    </style> -->
+    <link href="../index.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-2 kanbas-nav-bar">
+        <div class="nu-logo">
+          <img src="../assets/NU_logo.png" />
+        </div>
+        <div class="list-group">
+          <a
+            href="../profile/profile.html"
+            class="list-group-item list-group-item-action"
+          >
+            <i class="icon fas fa-user-circle"></i>
+            <div style="padding: 5px">Account</div>
+          </a>
+          <a
+            href="../courses/dashboard.html"
+            class="list-group-item list-group-item-action"
+          >
+            <i class="icon fas fa-tachometer-alt"></i>
+            <div style="padding: 5px">Dashboard</div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action active">
+            <i class="icon fas fa-book"></i>
+            <div style="padding: 5px">Courses</div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <i class="icon far fa-calendar-alt"></i>
+            <div style="padding: 5px">Calendar</div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <i class="icon fas fa-inbox"></i>
+            <div style="padding: 5px">Inbox</div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <i class="icon far fa-clock"></i>
+            <div style="padding: 5px">History</div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <i class="icon fab fa-youtube"></i>
+            <div style="padding: 5px">Studio</div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <i class="icon fas fa-copyright"></i>
+            <div style="padding: 5px">Commons</div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <i class="icon far fa-question-circle"></i>
+            <div style="padding: 5px">Help</div>
+          </a>
+        </div>
+      </div>
+      <div class="col main-container">
+        <div class="courses-header-section">
+          <div style="display: flex;">
+            <i
+              class="fas fa-bars"
+              style="font-size: 1.6rem; color: #d41b2c; margin-right: 1rem;"
+            ></i>
+            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                <ol style="margin-bottom: 0" class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a style="color: #d41b2c; text-decoration: none" href="#"
+                      >CS5610.17367.202410</a
+                    >
+                  </li>
+                  <li
+                    style="color: black"
+                    class="breadcrumb-item active"
+                    aria-current="page"
+                  >
+                    Grades
+                  </li>
+                </ol>
+              </nav>
+          </div>
+        </div>
+        <hr />
+        <div class="row profile-sec-container">
+          <div class="col-md-2 list-group profle-nav-bar">
+            <div style="width: 200px;" class="text-nowrap">
+              202310_2 Fall 2022 Semester Full Term Grad
+            </div>
+            <a href="../courses/courseHome.html" class="list-group-item list-group-item-action">
+              <div>Home</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Modules</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Piazza</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Zoom Meetings</div>
+            </a>
+            <a href="../assignments/assignments.html" class="list-group-item list-group-item-action">
+              <div>Assignments</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Quizzes</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action active">
+              <div>Grades</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>People</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Panopto Video</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Discussions<i style="color: gray;" class="fas fa-eye-slash float-end"></i></div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Announcements<i style="color: gray;" class="fas fa-eye-slash float-end"></i></div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Pages<i style="color: gray;" class="fas fa-eye-slash float-end"></i></div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Files<i style="color: gray;" class="fas fa-eye-slash float-end"></i></div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Rubrics<i style="color: gray;" class="fas fa-eye-slash float-end"></i></div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Outcomes<i style="color: gray;" class="fas fa-eye-slash float-end"></i></div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Collaborations<i style="color: gray;" class="fas fa-eye-slash float-end"></i></div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Syllabus</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Progress Reports [EAB Navigate]</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div>Settings</div>
+            </a>
+          </div>
+          <div class="col content-section grades-section">
+            <div class="modules-action-container">
+              <button type="button" class="btn btn-secondary float-end ms-2"><i class="fas fa-file-import me-1"></i>Import</button>
+              <div class="dropdown float-end">
+                <button class="btn btn-secondary dropdown-toggle ms-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-file-export me-1"></i>Export
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+              <button type="button" class="btn btn-secondary float-end ms-2"><i class="fas fa-cog"></i></button>
+            </div>
+            <div class="search-container">
+              <div class="dropdown drop-container me-2">
+                <label for="studentNameDrop" class="form-label"><strong>Student Names</strong></label>
+                <button id="studentNameDrop" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-search me-1"></i>Search Students
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+              <div class="dropdown drop-container ms-2">
+                <label for="assignNameDrop" class="form-label"><strong>Assignment Names</strong></label>
+                <button id="assignNameDrop" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-search me-1"></i>Search Assignments
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+            <button type="button" class="custom-btn btn btn-secondary mt-2"><i class="fas fa-filter"></i>Apply Filters</button>
+            <div class="table-responsive mt-2">
+              <table class="table table-bordered table-striped grades-table">
+                <thead>
+                  <tr class="table-data-align">
+                     <th style="text-align: initial;" scope="col">Student Name</th> 
+                     <th scope="col">A1 Setup<br />Out of 100</th> 
+                     <th scope="col">A2 HTML<br />Out of 100</th> 
+                     <th scope="col">A3 CSS<br />Out of 100</th> 
+                     <th scope="col">A4 Bootstrap<br />Out of 100</th> 
+                     <th scope="col">A5 Javascript<br />Out of 100</th> 
+                     <th scope="col">A6 React<br />Out of 100</th> 
+                     <th scope="col">A7 Redux<br />Out of 100</th> 
+                     <th scope="col">A8 Node<br />Out of 100</th> 
+                     <th scope="col">A9 Mongo<br />Out of 100</th> 
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="table-data-align">
+                      <th scope="row">Alice Wonderland</th>
+                      <td><input value="98%" size="2"></td>
+                      <td>89%</td>
+                      <td>78%</td>
+                      <td>56%</td>
+                      <td>78%</td>
+                      <td>89%</td>
+                      <td>98%</td>
+                      <td><input value="78%" size="2"></td>
+                      <td>95%</td>
+                  </tr>
+                  <tr class="table-data-align">
+                      <th scope="row">Bob Builder</th>
+                      <td>98%</td>
+                      <td>78%</td>
+                      <td><input value="48%" size="2"></td>
+                      <td>45%</td>
+                      <td>78%</td>
+                      <td>54%</td>
+                      <td>98%</td>
+                      <td>93%</td>
+                      <td>95%</td>
+                  </tr>
+                  <tr class="table-data-align">
+                      <th scope="row">Han Solo</th>
+                      <td>78%</td>
+                      <td>89%</td>
+                      <td>78%</td>
+                      <td>96%</td>
+                      <td>78%</td>
+                      <td>74%</td>
+                      <td><input value="88%" size="2"></td>
+                      <td>74%</td>
+                      <td>95%</td>
+                  </tr>
+                  <tr class="table-data-align">
+                      <th scope="row">Eren Jaegar</th>
+                      <td>98%</td>
+                      <td>56%</td>
+                      <td>23%</td>
+                      <td>56%</td>
+                      <td><input value="12%" size="2"></td>
+                      <td>45%</td>
+                      <td>23%</td>
+                      <td>78%</td>
+                      <td>63%</td>
+                  </tr>
+                  <tr class="table-data-align">
+                      <th scope="row">Mikasa</th>
+                      <td>100%</td>
+                      <td>100%</td>
+                      <td>100%</td>
+                      <td>100%</td>
+                      <td><input value="100%" size="2"></td>
+                      <td>100%</td>
+                      <td>100%</td>
+                      <td>100%</td>
+                      <td>100%</td>
+                  </tr>
+                  <tr class="table-data-align">
+                      <th scope="row">Levi Ackerman</th>
+                      <td>98%</td>
+                      <td>89%</td>
+                      <td>78%</td>
+                      <td>56%</td>
+                      <td><input value="59%" size="2"></td>
+                      <td>89%</td>
+                      <td>98%</td>
+                      <td>78%</td>
+                      <td>95%</td>
+                  </tr>
+                  <tr class="table-data-align">
+                      <th scope="row">Deadpool</th>
+                      <td>98%</td>
+                      <td><input value="98%" size="2"></td>
+                      <td>56%</td>
+                      <td>98%</td>
+                      <td>23%</td>
+                      <td>78%</td>
+                      <td>27%</td>
+                      <td><input value="71%" size="2"></td>
+                      <td>95%</td>
+                  </tr>
+                  <tr class="table-data-align">
+                      <th scope="row">Tony Stark</th>
+                      <td>9%</td>
+                      <td>8%</td>
+                      <td>7%</td>
+                      <td><input value="6%" size="2"></td>
+                      <td>5%</td>
+                      <td>4%</td>
+                      <td>3%</td>
+                      <td>2%</td>
+                      <td>1%</td>
+                  </tr>
+                  <tr class="table-data-align">
+                      <th scope="row">Wakanda forever</th>
+                      <td>98%</td>
+                      <td>89%</td>
+                      <td><input value="23%" size="2"></td>
+                      <td>56%</td>
+                      <td>78%</td>
+                      <td>89%</td>
+                      <td>98%</td>
+                      <td>78%</td>
+                      <td>95%</td>
+                  </tr>
+              </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

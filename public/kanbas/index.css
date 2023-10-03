@@ -1,4 +1,4 @@
-.main-container {
+.screen-height {
     height: 100vh;
 }
 
@@ -44,11 +44,11 @@
     color: #d41b2c;
 }
 
-.kanbas-nav-bar .list-group-item.active .icon{
+.kanbas-nav-bar .list-group-item.active .account-icon{
     color: lightgray;
 }
 
-.col.profile-container {
+.col.main-container {
     padding: 1.5rem;
 }
 .profile-header-section {
@@ -81,6 +81,7 @@
     color: #000;
     border-left: 2px solid #000;
     background-color: #fff;
+    border-radius: 0;
 }
 
 .profle-nav-bar .list-group-item-action:focus, .profle-nav-bar .list-group-item-action:hover {
@@ -97,8 +98,6 @@
 
 .profile-img-container {
     margin: 3vh 0;
-    display: flex;
-    justify-content: space-between;
 }
 
 .profile-form-container {
@@ -145,4 +144,131 @@
 
 .form-action-btn-container a {
     margin-left: 1rem;
+}
+
+.courses-container {
+    margin: 0 1rem;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-container {
+    width: 75%;
+}
+.card-container .card {
+    max-width: 270px;
+    min-width: 270px;
+    margin: 20px 40px 20px 0;
+}
+
+.card-container .card-link {
+    text-decoration: none;
+} 
+
+.card .card-custom-title {
+    color: rgb(0, 118, 184);
+    font-size: 1rem;
+    padding-bottom: 6px;
+}
+
+.card .card-custom-text {
+    color: rgb(17, 19, 20);
+}
+
+.card .card-image {
+    height: 16vh;
+}
+
+.card .icon {
+    margin: 8px 12px 0 0;
+    font-size: 1.5rem;
+    color: #2d3b45;
+}
+.modules-action-container {
+    display: flex;
+    justify-content: flex-end;
+}
+.student-view.btn-secondary, .modules-action-container .btn-secondary, .custom-btn.btn-secondary{
+    background: #f5f5f5;
+    color: #2d3b45;
+    border-radius: 0;
+    border-color: #c7cdd1;
+}
+
+.module-list .list-group-item .icon{
+    margin: 0 8px;
+}
+
+.module-list .list-group-item {
+    border-left: 4px solid rgb(3, 175, 3);
+    border-radius: 0 !important;
+}
+
+.module-list .list-group-item.list-group-item-secondary {
+    border: 0;
+    border-radius: 0 !important;
+}
+
+.courses-header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.status-options-list .status-option{
+    padding: 4px 12px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    border: 1px solid #b2babe;
+}
+
+.assignment-stat {
+    border: 1px solid #2d3b45;
+    padding: 0 12px;
+}
+
+.list-group-item.center-align {
+    display: flex;
+    align-items: center;
+}
+.assign-header a {
+    text-decoration: none;
+    color: #000;
+}
+
+.grades-section .search-container {
+    display: flex;
+}
+
+.drop-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.drop-container .btn-secondary {
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    border: 1px solid #b2babe;
+}
+
+.table .table-data-align {
+    text-align: center;
+}
+
+.table .table-data-align th{
+    text-align: center;
+    font-weight: 400;
+}
+
+.table.grades-table tbody tr th {
+    text-align: initial;
+    color: #d41b2c;
+    font-weight: 400;
 }
