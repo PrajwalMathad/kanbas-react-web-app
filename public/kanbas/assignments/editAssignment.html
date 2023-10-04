@@ -184,40 +184,196 @@
               </div>
               
               <div class="row mb-3">
-                <label for="assignPoints" class="col form-label">Points</label>
-                <input
+                <div class="col-2">
+                  <label for="assignPoints" class="form-label mt-1 float-end">Points</label>
+                </div>
+                <div class="col-5">
+                  <input
                   type="text"
-                  class="col form-control"
+                  class="form-control"
                   id="assignPoints"
                   value="100"
                   placeholder="Enter assignment points"
-                />
+                  />
+                </div>
               </div>
-              <div class="row dropdown">
-                <label for="assignPoints" class="col form-label">Assignment Group</label>
-                <button class="col btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  ASSIGNMENTS
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+              <div class="row mb-3">
+                <div class="col-2">
+                  <label class="form-label mt-1 float-end">Assignment Group</label>
+                </div>
+                <div class="col-5 dropdown drop-container">
+                  <button class="btn btn-secondary dropdown-toggle p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      ASSIGNMENTS
+                  </button>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
               </div>
-              <div class="row dropdown">
-                <label for="assignPoints" class="col form-label">Display Grade as</label>
-                <button class="col btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Percentage
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+              <div class="row mb-3">
+                <div class="col-2">
+                  <label class="form-label mt-1 float-end">Dispaly Grade as</label>
+                </div>
+                <div class="col-5 dropdown drop-container">
+                  <button class="btn btn-secondary dropdown-toggle p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Percentage
+                  </button>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                  <div class="form-check mt-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="check1"
+                    />
+                    <label class="form-check-label" for="check1">
+                      Do not count this assignment towards the final grade
+                    </label>
+                  </div>
+                </div>
               </div>
-
+              <div class="row mb-3">
+                <div class="col-2">
+                  <label class="form-label mt-1 float-end">Submission type</label>
+                </div>
+                <div class="col-5 m-2 p-3 submission-container">
+                  <div class="mb-3 dropdown drop-container">
+                    <button class="btn btn-secondary dropdown-toggle p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Online
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                  <h6>Online Entry Options</h6>
+                  <div class="form-check mt-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="check2"
+                      checked
+                    />
+                    <label class="form-check-label" for="check2">
+                      Text Entry
+                    </label>
+                  </div>
+                  <div class="form-check mt-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="check3"
+                      checked
+                    />
+                    <label class="form-check-label" for="check3">
+                      Website URL
+                    </label>
+                  </div>
+                  <div class="form-check mt-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="check1"
+                      checked
+                    />
+                    <label class="form-check-label" for="check1">
+                      Media Recordings
+                    </label>
+                  </div>
+                  <div class="form-check mt-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="check1"
+                    />
+                    <label class="form-check-label" for="check1">
+                      Student Annotations
+                    </label>
+                  </div>
+                  <div class="form-check mt-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="check1"
+                    />
+                    <label class="form-check-label" for="check1">
+                      File Uploads
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-2">
+                  <label class="form-label mt-1 float-end">Assign</label>
+                </div>
+                <div class="col-5">
+                  <div class="p-3 assign-container">
+                    <h6>Assign to</h6>
+                    <div class="p-2 submission-container mb-3">
+                      <div class="chip p-2 pt-1 pb-1 ">
+                        <span>Everyone</span>
+                        <i class="fas fa-times mt-1"></i>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <div><strong>Due</strong></div>
+                      <div class="calendar-container">
+                        <div class="p-2">Sep 18, 2023, 11:59pm</div>
+                        <div class="cal-icon p-2"><i class="far fa-calendar-alt"></i></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="mb-3 col-6">
+                        <div><strong>Available from</strong></div>
+                        <div class="calendar-container">
+                          <div class="p-2">Sep 18, 2023, 11:59pm</div>
+                          <div style="width: 20%;" class="cal-icon p-2"><i class="far fa-calendar-alt"></i></div>
+                        </div>
+                      </div>
+                      <div class="mb-3 col-6">
+                        <div><strong>Until</strong></div>
+                        <div class="calendar-container">
+                          <div class="p-2"></div>
+                          <div style="width: 20%;" class="cal-icon p-2"><i class="far fa-calendar-alt"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="assign-footer p-2">+Add</div>
+                </div>
             </div>
           </div>
+          <hr />
+          <div class="edit-assign-footer">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="check789"
+              />
+              <label class="form-check-label" for="check789">
+                Notify users that this content has changed
+              </label>
+            </div>
+            <div>
+              <button type="button" class="btn custom-btn btn-secondary ms-2">Cancel</button>
+              <button type="button" class="btn btn-danger ms-2" style="border-radius: 0;">Save</button>
+            </div>
+          </div>
+          <hr />
         </div>
       </div>
     </div>
