@@ -71,7 +71,7 @@
     color: #d41b2c;
     background-color: #fff;
     border: none; 
-    padding: 10px;
+    padding: 8px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -271,4 +271,38 @@
     text-align: initial;
     color: #d41b2c;
     font-weight: 400;
+}
+
+.settings-section .nav-link {
+    color: #d41b2c;
+}
+
+.image-container {
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+}
+
+.col-2.center-align {
+    display: flex;
+    align-items: center;
+}
+
+#course-btn.btn.disabled, #course-btn.btn:disabled {
+    background-color: #c7cdd1;
+    cursor: not-allowed;
+    color: #000;
+}
+
+.settings-section .list-group {
+    width: 30%;
+}
+
+.settings-section .list-group .list-group-item{
+    border-radius: 0;
+}
+
+.settings-section .list-group .list-group-item i{
+    color: #66696d;
+    margin-top: 6px;
 }
