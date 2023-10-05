@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="row">
-      <div class="col-md-2 kanbas-nav-bar">
+      <div class="d-none d-md-block col-2 kanbas-nav-bar">
         <div class="nu-logo">
           <img src="../assets/NU_logo.png" />
         </div>
@@ -30,7 +30,7 @@
             href="../profile/profile.html"
             class="list-group-item list-group-item-action"
           >
-            <i class="icon fas fa-user-circle"></i>
+            <i class="icon fas fa-user-circle account-icon"></i>
             <div style="padding: 5px">Account</div>
           </a>
           <a
@@ -70,39 +70,55 @@
           </a>
         </div>
       </div>
-      <div class="col main-container">
-        <div class="courses-header-section">
-          <div style="display: flex;">
-            <i
-              class="fas fa-bars"
-              style="font-size: 1.6rem; color: #d41b2c; margin-right: 1rem;"
-            ></i>
-            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
-                <ol style="margin-bottom: 0" class="breadcrumb">
-                  <li class="breadcrumb-item">
-                    <a style="color: #d41b2c; text-decoration: none" href="#"
-                      >CS5610.17367.202410</a
+      <div class="col">
+        <div class="d-none d-sm-block d-md-none courses-header-section-responsive">
+            <div class="courses-header-section">
+                <a style="color: #fff;" href="./kanbasNavBar.html"><i class="fas fa-bars ms-3" style="font-size: 1.6rem;"></i></a>
+                <div>
+                    CS5610.17367.202410 <br/>Home
+                </div>
+                <div>
+                    <i class="fas fa-glasses me-3"></i>
+                    <a style="color: #fff;" href="./secondaryNavBar.html">
+                        <i class="fas fa-chevron-down me-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 1.5rem 1.5rem 0;" class="d-none d-md-block">
+          <div class="courses-header-section">
+            <div style="display: flex;">
+                <i
+                class="fas fa-bars"
+                style="font-size: 1.6rem; color: #d41b2c; margin-right: 1rem;"
+              ></i>
+              <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                  <ol style="margin-bottom: 0" class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a style="color: #d41b2c; text-decoration: none" href="#"
+                        >CS5610.17367.202410</a
+                      >
+                    </li>
+                    <li
+                      style="color: black"
+                      class="breadcrumb-item active"
+                      aria-current="page"
                     >
-                  </li>
-                  <li
-                    style="color: black"
-                    class="breadcrumb-item active"
-                    aria-current="page"
-                  >
-                    Home
-                  </li>
-                </ol>
-              </nav>
-          </div>
-          <div class="float-end">
-            <button type="button" class="btn btn-secondary student-view ms-2">
-                <i class="fas fa-glasses"></i>Student View
-            </button>
+                      Home
+                    </li>
+                  </ol>
+                </nav>
+            </div>
+            <div>
+                <button type="button" class="btn btn-secondary student-view ms-2">
+                    <i class="fas fa-glasses me-2"></i>Student View
+                </button>
+            </div>
           </div>
         </div>
-        <hr />
-        <div class="row profile-sec-container">
-          <div class="col-md-2 list-group profle-nav-bar">
+        <hr class="d-none d-md-block" />
+        <div style="padding: 1.5rem;" class="row profile-sec-container">
+          <div class="d-none d-md-block col-2 list-group profle-nav-bar">
             <div style="width: 200px;" class="text-nowrap">
               202310_2 Fall 2022 Semester Full Term Grad
             </div>
@@ -318,7 +334,7 @@
                 </div>
             </div>
           </div>
-          <div class="col-md-2 course-status-section">
+          <div class="d-none d-lg-block col-2 course-status-section">
             <h4>Course Status</h4>
             <button type="button" class="btn btn-secondary custom-btn" style="margin: 0;">
                 <i class="fas fa-ban" style="margin-right: 4px;"></i>Unpublish

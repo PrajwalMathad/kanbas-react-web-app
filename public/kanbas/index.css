@@ -2,7 +2,7 @@
     height: 100vh;
 }
 
-.col-md-2.kanbas-nav-bar {
+.col-2.kanbas-nav-bar {
     width: 85px;
     padding: 0;
     margin-left: 10px;
@@ -44,12 +44,13 @@
     color: #d41b2c;
 }
 
-.kanbas-nav-bar .list-group-item.active .account-icon{
+.kanbas-nav-bar .list-group-item .account-icon{
     color: lightgray;
 }
 
 .col.main-container {
     padding: 1.5rem;
+    padding-left: 2rem;
 }
 .profile-header-section {
     display: flex;
@@ -58,8 +59,8 @@
 }
 
 .profile-sec-container {
-    margin-left: 0;
     display: flex;
+    margin-right: 0;
 }
 
 .profle-nav-bar .list-group {
@@ -217,6 +218,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: inherit;
+}
+
+.courses-header-section-responsive {
+    background-color: #000;
+    height: 10vh;
+    color: #fff;
 }
 
 .status-options-list .status-option{
@@ -235,6 +243,7 @@
     display: flex;
     align-items: center;
 }
+
 .assign-header a {
     text-decoration: none;
     color: #000;
@@ -354,4 +363,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.navbar-container .list-group .list-group-item{
+    display: flex;
+    align-items: center;
+    border: none;
+    color: #d41b2c;
 }
