@@ -1,7 +1,12 @@
 .screen-height {
     height: 100vh;
+    margin-right: 0 !important;
+
 }
 
+.row .max-container {
+    margin-right: 0;
+}
 .col-2.kanbas-nav-bar {
     width: 85px;
     padding: 0;
@@ -45,12 +50,18 @@
 }
 
 .kanbas-nav-bar .list-group-item .account-icon{
-    color: lightgray;
+    color: gray;
+}
+
+.course-code {
+    width: 200px;
+    padding-left: 8px;
+    font-size: small;
 }
 
 .col.main-container {
     padding: 1.5rem;
-    padding-left: 2rem;
+    padding-left: 2.3rem;
 }
 .profile-header-section {
     display: flex;
@@ -63,9 +74,10 @@
     margin-right: 0;
 }
 
-.profle-nav-bar .list-group {
+.profle-nav-bar.list-group {
     border-radius: 0;
-    width: 200px;
+    max-width: 200px;
+    width: 12vw;
 }
 
 .profle-nav-bar .list-group-item{
@@ -265,6 +277,11 @@
     display: flex;
     align-items: center;
     border: 1px solid #b2babe;
+}
+
+.drop-container .btn-secondary .btn-text{ 
+    width: 100%;
+    text-align: initial;
 }
 
 .table .table-data-align {
