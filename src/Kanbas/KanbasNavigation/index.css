@@ -1,0 +1,49 @@
+.kanbas-nav-bar {
+    width: 85px;
+    padding: 0;
+    background: #000;
+    height: 100vh;
+}
+
+.nu-logo {
+    background-color: black;
+    padding: 0;
+}
+.nu-logo img {
+    width: -webkit-fill-available;
+}
+
+.kanbas-nav-bar .list-group {
+    border-radius: 0;
+}
+
+.kanbas-nav-bar .list-group-item{
+    z-index: 2;
+    color: #fff;
+    background-color: #000;
+    border: none; 
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vh;
+}
+
+.kanbas-nav-bar .list-group-item.active{
+    color: #d41b2c;
+    background-color: #fff;
+}
+
+.kanbas-nav-bar .list-group-item .icon {
+    font-size: 1.5rem;
+    color: #d41b2c;
+}
+
+.kanbas-nav-bar .list-group-item .account-icon{
+    color: gray;
+}
+
+.kanbas-nav-bar .list-group-item .nav-label {
+    padding: 5px;
+}
