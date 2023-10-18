@@ -1,0 +1,18 @@
+.col-10.modules-container {
+    width: 80%;
+}
+.col-2.course-status-section {
+    padding-right: 1.5em;
+    min-width: 20%;
+}
+.course-text-align {
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-options-list .status-option{
+    padding: 4px 12px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    border: 1px solid #b2babe;
+}

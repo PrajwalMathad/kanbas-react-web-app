@@ -1,0 +1,62 @@
+.page-title {
+    font-size: 1.8rem
+}
+
+.published-courses {
+    font-size: 1.5rem;
+}
+.courses-container {
+    margin: 0 1rem;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-container .card .card-details{
+    padding: 12px;
+}
+.card-container .card .card-image {
+    height: 150px;
+    border-radius: inherit;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.card-container .card {
+    max-width: 270px;
+    min-width: 270px;
+    margin: 20px;
+    padding: 0;
+}
+
+.card-container .card-link {
+    text-decoration: none;
+    border-radius: inherit;
+} 
+
+.card .card-custom-title {
+    color: rgb(0, 118, 184);
+    font-size: 1rem;
+    padding-bottom: 6px;
+}
+
+.card .card-custom-text {
+    color: rgb(17, 19, 20);
+}
+
+.card .card-image {
+    height: 16vh;
+}
+
+.card .icon {
+    margin: 8px;
+    font-size: 1.5rem;
+    color: #2d3b45;
+}
+
+.card .icon.fa-ellipsis-v {
+    color: #fff;
+    float: right;
+}

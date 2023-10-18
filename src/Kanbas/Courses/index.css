@@ -1,0 +1,28 @@
+.course-container {
+    left: "320px";
+    top: "50px";
+}
+
+.courses-header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    margin-bottom: 1rem;
+}
+
+.courses-header-section-responsive {
+    background-color: #000;
+    height: 10vh;
+    color: #fff;
+}
+
+.course-menu-icon {
+    font-size: 1.6rem; 
+    color: #d41b2c; 
+    margin-right: 1rem;
+}
+
+.courses-header-section .breadcrumb-item-color {
+    color: #d41b2c; 
+}

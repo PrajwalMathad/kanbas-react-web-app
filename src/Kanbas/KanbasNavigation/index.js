@@ -46,7 +46,7 @@ function KanbasNavigation() {
     ];
 
     return (
-        <div className="kanbas-nav-bar">
+        <div className="col-2 kanbas-nav-bar">
             <div className="nu-logo">
                 <img alt="NU logo" src={NULogo} />
             </div>

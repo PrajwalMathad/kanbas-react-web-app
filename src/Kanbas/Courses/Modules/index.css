@@ -1,0 +1,22 @@
+.module-list {
+    padding-right: 1em;
+}
+
+.module-list .list-group-item .icon{
+    margin: 0 8px;
+}
+
+.module-list .list-group-item {
+    border-left: 4px solid rgb(3, 175, 3);
+    border-radius: 0 !important;
+}
+
+.module-list .list-group-item.list-group-item-secondary {
+    border: 0;
+    border-radius: 0 !important;
+}
+
+.modules-action-container {
+    display: flex;
+    justify-content: flex-end;
+}
