@@ -11,6 +11,7 @@ function Kanbas() {
             <div className="col second-container">
                 <Routes>
                     <Route path="/" element={<Navigate to="Dashboard" />} />
+                    <Route path="Courses" element={<Navigate to="RS101/Home" />} />
                     <Route path="Account" element={<WIP />} />
                     <Route path="Dashboard" element={<Dashboard />} />
                     <Route path="Courses/:courseId/*" element={<Courses />} />
