@@ -1,37 +1,51 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
+import { FaGripVertical, FaPlus, FaSortDown, FaCheckCircle } from "react-icons/fa";
+import { FaEllipsisVertical } from 'react-icons/fa6';
 
 function ModuleList() {
   const { courseId } = useParams();
   const modules = db.modules;
   return (
-    <ul className="list-group">
+    <div class="list-group mt-3">
       {
         modules
-         .filter((module) => module.course === courseId)
-         .map((module, index) => (
-           <li key={index} className="list-group-item">
-             <h3>{module.name}</h3>
-             <p>{module.description}</p>
-             {
+          .filter((module) => module.course === courseId)
+          .map((module, index) => (
+            <div key={index} class="list-group-item list-group-item-secondary mb-3 p-0">
+              <div className="p-2">
+                <FaGripVertical className="me-2" />
+                <FaSortDown className="me-1 mb-2" />
+                {module.name}
+                <FaEllipsisVertical className="me-2 mt-1 float-end" />
+                <FaPlus className="me-2 mt-1 float-end" />
+                <FaCheckCircle className="green-color me-2 mt-1 float-end" />
+              </div>
+              {
                 module.lessons && (
-                    <ul className="list-group">
-                        {
-                            module.lessons.map((lesson, index) => (
-                                <li key={index} className="list-group-item">
-                                    <h4>{lesson.name}</h4>
-                                    <p>{lesson.description}</p>
-                                </li>
-                            ))
-                        }
-                    </ul>
+                  <div className="list-group">
+                    {
+                      module.lessons.map((lesson, index) => (
+                        <div class="list-group-item ">
+                          <div className="display-flex">
+                            <FaGripVertical className="me-2 mt-1" />
+                            <div>
+                              {lesson.name}
+                              {/* <hr className="no-margin"/> */}
+                              <div className="ms-5">{lesson.description}</div>
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    }
+                  </div>
                 )
-             }
-           </li>
-      ))
+              }
+            </div>
+          ))
       }
-    </ul>
+    </div>
   );
 }
 export default ModuleList;
