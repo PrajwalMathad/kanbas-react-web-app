@@ -29,9 +29,11 @@ function ModuleList() {
                       module.lessons.map((lesson, index) => (
                         <div class="list-group-item ">
                           <div className="display-flex">
-                            <FaGripVertical className="me-2 mt-1" />
+                            <FaGripVertical style={{ fontSize: "large" }} className="me-2 mt-1" />
                             <div>
                               {lesson.name}
+                              <FaEllipsisVertical className="mt-1 float-end" />
+                              <FaCheckCircle className="green-color me-2 mt-1 float-end" />
                               {/* <hr className="no-margin"/> */}
                               <div className="ms-5">{lesson.description}</div>
                             </div>

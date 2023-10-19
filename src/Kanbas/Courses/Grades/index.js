@@ -52,8 +52,8 @@ function Grades() {
           </ul>
         </div>
       </div>
-      <button type="button" className="custom-btn btn btn-secondary mt-2"><FaFilter className="me-1" />Apply Filters</button>
-      <div className="table-responsive mt-2">
+      <button type="button" className="custom-btn btn btn-secondary mt-3"><FaFilter className="me-1" />Apply Filters</button>
+      <div className="table-responsive mt-3">
         <table className="table table-bordered table-striped grades-table">
           <thead>
             <tr className="table-data-align">

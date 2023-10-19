@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaEllipsisVertical } from 'react-icons/fa6';
-import { FaGripVertical, FaPlus, FaRegCheckCircle, FaFileSignature, FaSortDown } from "react-icons/fa";
+import { FaGripVertical, FaPlus, FaCheckCircle, FaFileSignature, FaSortDown } from "react-icons/fa";
 import db from "../../Database";
 import "./index.css";
 
@@ -52,7 +52,7 @@ function Assignments() {
             </div>
             <div>
               <FaEllipsisVertical className="me-2 mt-1 float-end" />
-              <FaRegCheckCircle className="green-color me-2 mt-1 float-end" />
+              <FaCheckCircle className="green-color me-2 mt-1 float-end" />
             </div>
           </Link>
         ))}
