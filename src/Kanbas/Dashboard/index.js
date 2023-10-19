@@ -7,7 +7,12 @@ function Dashboard() {
   const courses = db.courses;
   return (
     <div className="main-container">
-      <div className="page-title">Dashboard</div>
+      <div className="page-title">
+        Dashboard
+        <Link to={`/Labs`}>
+          <button type="button" className="btn btn-danger float-end ms-2">Labs</button>
+        </Link>
+      </div>
       <hr />
       <div className="courses-container">
         <div className="published-courses">Published Courses ({courses.length})</div>
