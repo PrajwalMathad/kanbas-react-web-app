@@ -22,7 +22,7 @@ function Courses() {
         <div style={{ "display": "flex" }}>
           <FaBars className="course-menu-icon" />
           <nav style={{ "--bs-breadcrumb-divider": "'>'" }} aria-label="breadcrumb">
-            <ol style={{ "margin-bottom": "0" }} className="breadcrumb">
+            <ol style={{ marginBottom: "0" }} className="breadcrumb">
               <li className="breadcrumb-item breadcrumb-item-color">
                 {course.name}
               </li>

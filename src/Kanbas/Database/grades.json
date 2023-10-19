@@ -72,5 +72,180 @@
       "student": "126",
       "assignment": "A202",
       "grade": "80"
+    },
+
+    {
+      "_id": "13",
+      "student": "121",
+      "assignment": "A103",
+      "grade": "90"
+    },
+    {
+      "_id": "14",
+      "student": "122",
+      "assignment": "A103",
+      "grade": "91"
+    },
+    {
+      "_id": "15",
+      "student": "123",
+      "assignment": "A103",
+      "grade": "92"
+    },
+    {
+      "_id": "16",
+      "student": "121",
+      "assignment": "A103",
+      "grade": "92"
+    },
+    {
+      "_id": "17",
+      "student": "122",
+      "assignment": "A103",
+      "grade": "91"
+    },
+    {
+      "_id": "18",
+      "student": "123",
+      "assignment": "A103",
+      "grade": "90"
+    },
+
+    {
+      "_id": "1w",
+      "student": "121",
+      "assignment": "A301",
+      "grade": "8"
+    },
+    {
+      "_id": "2w",
+      "student": "122",
+      "assignment": "A301",
+      "grade": "91"
+    },
+    {
+      "_id": "3e",
+      "student": "123",
+      "assignment": "A301",
+      "grade": "92"
+    },
+    {
+      "_id": "4e",
+      "student": "121",
+      "assignment": "A302",
+      "grade": "2"
+    },
+    {
+      "_id": "5e",
+      "student": "122",
+      "assignment": "A302",
+      "grade": "91"
+    },
+    {
+      "_id": "6e",
+      "student": "123",
+      "assignment": "A302",
+      "grade": "90"
+    },{
+      "_id": "4r",
+      "student": "124",
+      "assignment": "A302",
+      "grade": "42"
+    },
+    {
+      "_id": "5ee",
+      "student": "124",
+      "assignment": "A102",
+      "grade": "91"
+    },
+    {
+      "_id": "6re",
+      "student": "124",
+      "assignment": "A302",
+      "grade": "90"
+    },
+    {
+      "_id": "1q",
+      "student": "125",
+      "assignment": "A101",
+      "grade": "90"
+    },
+    {
+      "_id": "4q",
+      "student": "125",
+      "assignment": "A102",
+      "grade": "92"
+    },
+    {
+      "_id": "5q",
+      "student": "125",
+      "assignment": "A103",
+      "grade": "91"
+    },
+    {
+      "_id": "14qq",
+      "student": "125",
+      "assignment": "A201",
+      "grade": "91"
+    },
+    {
+      "_id": "15q",
+      "student": "125",
+      "assignment": "A202",
+      "grade": "92"
+    },
+    {
+      "_id": "15ew",
+      "student": "125",
+      "assignment": "A203",
+      "grade": "92"
+    },
+    {
+      "_id": "14qqr",
+      "student": "125",
+      "assignment": "A301",
+      "grade": "91"
+    },
+    {
+      "_id": "1534q",
+      "student": "125",
+      "assignment": "A302",
+      "grade": "92"
+    },
+    {
+      "_id": "15ertdfew",
+      "student": "125",
+      "assignment": "A303",
+      "grade": "92"
+    },
+    {
+      "_id": "14aqqr",
+      "student": "124",
+      "assignment": "A301",
+      "grade": "91"
+    },
+    {
+      "_id": "1s534q",
+      "student": "124",
+      "assignment": "A303",
+      "grade": "92"
+    },
+    {
+      "_id": "15aertdfew",
+      "student": "124",
+      "assignment": "A203",
+      "grade": "92"
+    },
+    {
+      "_id": "1s53s4q",
+      "student": "124",
+      "assignment": "A101",
+      "grade": "92"
+    },
+    {
+      "_id": "15jklw",
+      "student": "124",
+      "assignment": "A103",
+      "grade": "92"
     }
   ]

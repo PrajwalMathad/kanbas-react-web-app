@@ -9,7 +9,7 @@ function CourseNavigation() {
   const { pathname } = useLocation();
   return (
     <div className="col-2 list-group profle-nav-bar">
-      <div class="text-nowrap course-code">
+      <div className="text-nowrap course-code">
         202310_2 Fall 2022 Semester Full Term Grad
       </div>
       {links.map((link, index) => (
