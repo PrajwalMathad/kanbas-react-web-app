@@ -3,7 +3,6 @@ function ArrayStateVariable() {
   const [array, setArray] = useState([1, 2, 3, 4, 5]);
   const addElement = () => {
     const newArray = [
-      Math.floor(Math.random() * 100),
       ...array,
       Math.floor(Math.random() * 100),
     ];

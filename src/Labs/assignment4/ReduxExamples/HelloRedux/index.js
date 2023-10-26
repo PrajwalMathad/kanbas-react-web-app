@@ -9,7 +9,7 @@ function HelloRedux() {
   return (
     <div>
       <h1>Hello Redux</h1>
-      <button onClick={() => dispatch(setMessage("Hello Redux"))}>
+      <button onClick={() => dispatch(setMessage("Hello Redux test"))}>
         Set Message
       </button>
       <h2>{message}</h2>

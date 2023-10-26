@@ -1,4 +1,4 @@
-function ChildStateComponent({ setCounter, counter }) {
+function ChildStateComponent({ counter, setCounter }) {
   return (
     <div>
       <h3>Counter {counter}</h3>
