@@ -60,3 +60,19 @@
     color: #fff;
     float: right;
 }
+
+.course-card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.split-dashboard-container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.split-dashboard-container .course-form {
+    width: 40%;
+}
