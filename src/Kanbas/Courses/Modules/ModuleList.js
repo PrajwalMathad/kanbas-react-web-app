@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import { FaGripVertical, FaPlus, FaSortDown, FaCheckCircle } from "react-icons/fa";
-import { FaEllipsisVertical } from 'react-icons/fa6'; import { useSelector, useDispatch } from "react-redux";
+import { FaEllipsisVertical } from 'react-icons/fa6'; 
+import { useSelector, useDispatch } from "react-redux";
 import {
   addModule,
   deleteModule,

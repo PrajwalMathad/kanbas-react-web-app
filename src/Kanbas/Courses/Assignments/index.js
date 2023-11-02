@@ -1,13 +1,24 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { FaEllipsisVertical } from 'react-icons/fa6';
 import { FaGripVertical, FaPlus, FaCheckCircle, FaFileSignature, FaSortDown } from "react-icons/fa";
-import db from "../../Database";
 import "./index.css";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  deleteAssignment,
+  setAssignment
+} from './assignmentsReducer';
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const openAssignmentEditor = () => {
+    dispatch(setAssignment({ name: "New Assignment", description: "New Description", course: courseId, dueDate:'', availFrom: '', availUntil:'' }))
+    navigate(`/Kanbas/Courses/${courseId}/Assignments/newAssignment`);
+  };
+
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId);
   return (
@@ -21,7 +32,8 @@ function Assignments() {
         />
         <div className="modules-action-container">
           <button type="button" className="btn btn-secondary float-end ms-2">+ Group</button>
-          <button type="button" className="btn btn-danger float-end ms-2">+ Assignment</button>
+          <button type="button" className="btn btn-danger float-end ms-2" 
+          onClick={openAssignmentEditor}>+ Assignment</button>
           <button type="button" className="btn btn-secondary float-end ms-2 p-1">
             <FaEllipsisVertical /></button>
         </div>
@@ -40,17 +52,27 @@ function Assignments() {
           <Link
             key={assignment._id}
             to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            className="list-group-item assignment-row">
+            className="list-group-item assignment-row" 
+            onClick={() => {
+              dispatch(setAssignment(assignment));
+            }}>
             <div className="center-align">
               <FaGripVertical className="me-3" />
               <FaFileSignature className="green-color me-3" />
               <div>
-                <strong>{assignment.title}</strong><br />
-                {assignment.desc}<br />
-                <strong>Due</strong> {assignment.due}
+                <strong>{assignment.name}</strong><br />
+                {assignment.description}<br />
+                <strong>Due</strong> {assignment.dueDate } at 11:59pm | 100pts
               </div>
             </div>
             <div>
+              <button type="button" className="btn btn-danger custom-btn me-2 ms-1 float-end"
+                onClick={(event) => {
+                  event.preventDefault();
+                  dispatch(deleteAssignment(assignment._id));
+                }}>
+                Delete
+              </button>
               <FaEllipsisVertical className="me-2 mt-1 float-end" />
               <FaCheckCircle className="green-color me-2 mt-1 float-end" />
             </div>
