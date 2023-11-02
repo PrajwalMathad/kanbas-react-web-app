@@ -72,7 +72,7 @@ function ModuleList({ showModuleForm, setShowModuleForm }) {
                   Delete
                 </button>
               </div>
-              <div className="list-group-item">
+              <div className="list-group-item desc-row">
                 {module.description}
               </div>
               {
@@ -87,7 +87,6 @@ function ModuleList({ showModuleForm, setShowModuleForm }) {
                               {lesson.name}
                               <FaEllipsisVertical className="mt-1 float-end" />
                               <FaCheckCircle className="green-color me-2 mt-1 float-end" />
-                              {/* <hr className="no-margin"/> */}
                               <div className="ms-5">{lesson.description}</div>
                             </div>
                           </div>
