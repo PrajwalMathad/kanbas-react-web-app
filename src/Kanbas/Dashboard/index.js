@@ -1,43 +1,8 @@
-import db from "../Database";
-import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEllipsisV } from "react-icons/fa";
 import "./index.css";
-function Dashboard() {
-  const [courses, setCourses] = useState(db.courses);
-  const [showForm, setShowForm] = useState(false);
-  const [course, setCourse] = useState({
-    name: "New Course",
-    number: "New Number",
-    startDate: "2023-09-10",
-    endDate: "2023-12-15",
-    background: "rgb(96, 228, 228)"
-  })
-
-  const toggleForm = () => {
-    setShowForm(!showForm);
-  }
-  const addCourse = () => {
-    setCourses([...courses, { ...course, _id: new Date().getTime() }])
-    setShowForm(false);
-  }
-
-  const deleteCourse = (courseId) => {
-    setCourses(courses.filter((course) => course._id !== courseId));
-  }
-
-  const updateCourse = () => {
-    setCourses(
-      courses.map((c) => {
-        if (c._id === course._id) {
-          return course;
-        } else {
-          return c;
-        }
-      })
-    );
-    setShowForm(false);
-  };
+function Dashboard({ courses, course, setCourse, addCourse,
+  deleteCourse, updateCourse, showForm, setShowForm }) {
 
   return (
     <div className="main-container">
@@ -53,7 +18,7 @@ function Dashboard() {
         <hr />
         <button type="button" className="btn btn-danger custom-btn ms-2"
           onClick={() => {
-            toggleForm();
+            setShowForm(true);
           }}>
           Add New Course
         </button>
@@ -107,17 +72,13 @@ function Dashboard() {
               onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
             <input value={course.endDate} className="form-control mb-3" type="date"
               onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
-            <div className="course-card-actions mt-3">
-              <button type="button" className="btn btn-secondary custom-btn"
-                onClick={() => {
-                  addCourse();
-                }}>
+            <div className="display-flex mt-3">
+              <button type="button" className="btn btn-secondary custom-btn me-3"
+                onClick={addCourse}>
                 Add Course
               </button>
               <button type="button" className="btn btn-secondary custom-btn"
-                onClick={() => {
-                  updateCourse();
-                }}>
+                onClick={updateCourse}>
                 Update Course
               </button>
             </div>

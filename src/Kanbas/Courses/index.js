@@ -11,11 +11,11 @@ import WIP from "../WIP";
 import { FaBars, FaGlasses } from "react-icons/fa";
 import "./index.css";
 
-function Courses() {
+function Courses({courses}) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const [screen] = pathname.split("/");
-  const course = db.courses.find((course) => course._id === courseId);
+  const [empty, kanbas, id, screen] = pathname.split("/");
+  const course = courses.find((course) => course._id === courseId);
   return (
     <div className="main-container">
       <div className="courses-header-section">
