@@ -30,7 +30,7 @@ function ModuleList({ showModuleForm, setShowModuleForm }) {
           onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
         />
         <div className="display-flex mt-3">
-          <button type="button" className="btn btn-secondary custom-btn me-3"
+          <button type="button" className="btn btn-success custom-btn me-3"
             onClick={() => {
               dispatch(addModule({ ...module, course: courseId }));
               setShowModuleForm(false);
