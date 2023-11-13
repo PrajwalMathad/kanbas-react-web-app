@@ -16,9 +16,22 @@ function Assignment4() {
   const sayHello = () => {
     alert("Hello World!");
   };
+
+  const handleClick = (parameter = "Hello") => {
+    console.log(parameter)
+  }
   return (
     <div>
       <h1>Assignment 4</h1>
+      <button onClick={() => handleClick("Hello")}>
+        Hello 1
+      </button>
+      <button onClick={handleClick("Hello")}>
+        Hello 2
+      </button>
+      <button onClick={handleClick}>
+        Hello 3
+      </button>
       <ReduxExamples />
       <ParentStateComponent />
       <ArrayStateVariable />
