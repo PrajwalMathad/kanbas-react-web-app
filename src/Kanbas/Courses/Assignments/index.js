@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { FaEllipsisVertical } from 'react-icons/fa6';
 import { FaGripVertical, FaPlus, FaCheckCircle, FaFileSignature, FaSortDown } from "react-icons/fa";
 import "./index.css";
 import { useSelector, useDispatch } from "react-redux";
+import { findAssignmentsForCourse } from "./service";
 import {
-  deleteAssignment,
+  setAssignments,
   setAssignment
 } from './assignmentsReducer';
 
@@ -19,8 +20,16 @@ function Assignments() {
     navigate(`/Kanbas/Courses/${courseId}/Assignments/newAssignment`);
   };
 
+  useEffect(() => {
+    findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+      );
+  }, [courseId]);
+
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId);
+
   return (
     <div className="col content-section module-list">
       <div className="search-container mb-3">

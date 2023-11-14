@@ -5,6 +5,7 @@ import { FaEllipsisVertical } from 'react-icons/fa6';
 import db from "../../Database";
 import { useSelector, useDispatch } from "react-redux";
 import { addAssignment, updateAssignment, setAssignment } from './assignmentsReducer';
+import { createAssignmentService, updateAssignmentService } from "./service";
 
 function AssignmentEditor() {
   const { assignmentId } = useParams();
@@ -13,11 +14,25 @@ function AssignmentEditor() {
 
   const { courseId } = useParams();
 
+  const handleAddAssignment = () => {
+    createAssignmentService(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+  };
+
+  const handleUpdateAssignment = async () => {
+    updateAssignmentService(assignment).then((status) => {
+      dispatch(updateAssignment(assignment));
+    });
+  };
+
   const handleSave = () => {
     if(assignmentId === "newAssignment") {
-      dispatch(addAssignment(assignment));
+      // dispatch(addAssignment(assignment));
+      handleAddAssignment(assignment);
     } else {
-      dispatch(updateAssignment(assignment));
+      // dispatch(updateAssignment(assignment));
+      handleUpdateAssignment(assignment);
     }
   }
 

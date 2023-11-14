@@ -13,6 +13,7 @@ import { FaBars, FaGlasses } from "react-icons/fa";
 import "./index.css";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteAssignment } from './Assignments/assignmentsReducer';
+import { deleteAssignmentService } from "./Assignments/service";
 
 function Courses({ courses }) {
   const { courseId } = useParams();
@@ -22,13 +23,21 @@ function Courses({ courses }) {
   // const course = courses.find((course) => course._id === courseId);
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
-  const URL = "https://kanbas-node-server-app-1hs4.onrender.com/api/courses";
+  // const URL = "https://kanbas-node-server-app-1hs4.onrender.com/api/courses";
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  const URL = `${API_BASE}/courses`;
 
   const findCourseById = async (courseId) => {
     const response = await axios.get(
       `${URL}/${courseId}`
     );
     setCourse(response.data);
+  };
+
+  const handleDeleteAssignment = (aId) => {
+    deleteAssignmentService(aId).then((status) => {
+      dispatch(deleteAssignment(aId));
+    });
   };
 
   useEffect(() => {
@@ -102,7 +111,7 @@ function Courses({ courses }) {
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onClick={() => {
-                dispatch(deleteAssignment(assignment._id))
+                handleDeleteAssignment(assignment._id)
               }}>Yes</button>
             </div>
           </div>

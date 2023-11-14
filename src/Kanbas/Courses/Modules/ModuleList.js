@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import { FaGripVertical, FaPlus, FaSortDown, FaCheckCircle } from "react-icons/fa";
-import { FaEllipsisVertical } from 'react-icons/fa6'; 
+import { FaEllipsisVertical } from 'react-icons/fa6';
 import { useSelector, useDispatch } from "react-redux";
+import { findModulesForCourse, createModule, deleteModuleService, updateModuleService } from "./service";
 import {
   addModule,
   deleteModule,
   updateModule,
   setModule,
+  setModules
 } from "./moduleReducer";
 
 
@@ -17,6 +19,33 @@ function ModuleList({ showModuleForm, setShowModuleForm }) {
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    deleteModuleService(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    updateModuleService(module).then((status) => {
+      dispatch(updateModule(module));
+    });
+  };
+
+
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+      );
+  }, [courseId]);
+
 
   return (
     <div className="list-group mt-3">
@@ -32,7 +61,8 @@ function ModuleList({ showModuleForm, setShowModuleForm }) {
         <div className="display-flex mt-3">
           <button type="button" className="btn btn-success custom-btn me-3"
             onClick={() => {
-              dispatch(addModule({ ...module, course: courseId }));
+              // dispatch(addModule({ ...module, course: courseId }));
+              handleAddModule();
               setShowModuleForm(false);
             }
             }>
@@ -40,7 +70,8 @@ function ModuleList({ showModuleForm, setShowModuleForm }) {
           </button>
           <button type="button" className="btn btn-secondary custom-btn"
             onClick={() => {
-              dispatch(updateModule(module));
+              // dispatch(updateModule(module));
+              handleUpdateModule(module)
               setShowModuleForm(false);
             }}>
             Update Module
@@ -68,7 +99,8 @@ function ModuleList({ showModuleForm, setShowModuleForm }) {
                 </button>
                 <button type="button" className="btn btn-danger custom-btn me-2 ms-1 float-end"
                   onClick={() => {
-                    dispatch(deleteModule(module._id));
+                    // dispatch(deleteModule(module._id));
+                    handleDeleteModule(module._id)
                   }}>
                   Delete
                 </button>
