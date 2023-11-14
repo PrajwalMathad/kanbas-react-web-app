@@ -1,5 +1,6 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import { useParams, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import axios from "axios";
 import db from "../Database";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
@@ -16,10 +17,25 @@ import { deleteAssignment } from './Assignments/assignmentsReducer';
 function Courses({ courses }) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
+  const [course, setCourse] = useState({});
   const [empty, kanbas, id, screen] = pathname.split("/");
-  const course = courses.find((course) => course._id === courseId);
+  // const course = courses.find((course) => course._id === courseId);
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
+  const URL = "http://localhost:4000/api/courses";
+
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
+
   return (
     <div className="main-container">
       <div className="courses-header-section">
