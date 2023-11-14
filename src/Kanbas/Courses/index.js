@@ -22,7 +22,7 @@ function Courses({ courses }) {
   // const course = courses.find((course) => course._id === courseId);
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
-  const URL = "http://localhost:4000/api/courses";
+  const URL = "https://kanbas-node-server-app-1hs4.onrender.com/api/courses";
 
   const findCourseById = async (courseId) => {
     const response = await axios.get(
