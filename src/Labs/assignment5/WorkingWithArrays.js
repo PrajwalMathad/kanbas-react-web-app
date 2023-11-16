@@ -49,7 +49,7 @@ function WorkingWithArrays() {
   };
 
   const fetchTodos = async () => {
-    const response = await axios.get("http://localhost:4000/a5/todos");
+    const response = await axios.get(`${API}/a5/todos`);
     setTodos(response.data);
   };
 
