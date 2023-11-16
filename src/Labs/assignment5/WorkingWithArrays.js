@@ -135,7 +135,7 @@ function WorkingWithArrays() {
         Update Todo
       </button>
 
-      <button onClick={createTodo}
+      <button onClick={postTodo}
         className="btn btn-primary mb-2 w-100">
         Create Todo
       </button>
