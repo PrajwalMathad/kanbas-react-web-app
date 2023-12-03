@@ -8,6 +8,8 @@ import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import store from "./store";
 import { Provider } from "react-redux";
+import Account from "./Users/account";
+import UserTable from "./Users/table";
 
 function Kanbas() {
     const [courses, setCourses] = useState([]);
@@ -76,7 +78,9 @@ function Kanbas() {
                     <Routes>
                         <Route path="/" element={<Navigate to="Dashboard" />} />
                         <Route path="Courses" element={<Navigate to="RS101/Home" />} />
-                        <Route path="Account" element={<WIP />} />
+                        <Route path="Account" element={<Account />} />
+                        <Route path="Account/:id" element={<Account />} />
+                        <Route path="Users" element={<UserTable />} />
                         <Route path="Dashboard" element={
                             <Dashboard
                                 courses={courses}
