@@ -1,6 +1,7 @@
 import * as client from "./client";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import "./index.css";
 function Account() {
     const { id } = useParams();
     const [account, setAccount] = useState(null);
@@ -33,36 +34,47 @@ function Account() {
     }, []);
 
     return (
-        <div className="w-50">
-            <h1>Account</h1>
+        <div>
+            <div className="page-title ms-4 mt-4" style={{ width: "40%" }}>
+                Account
+                <Link style={{ float: "right" }} to="/Kanbas/Users" className="btn btn-warning">
+                    Users
+                </Link>
+                <hr />
+            </div>
             {account && (
-                <div>
-                    <input value={account.password}
+                <div className="user-form">
+                    <input value={account.password} class="form-control mb-2"
+                        placeholder="Password"
                         onChange={(e) => setAccount({
                             ...account,
                             password: e.target.value
                         })} />
-                    <input value={account.firstName}
+                    <input value={account.firstName} class="form-control mb-2"
+                        placeholder="First Name"
                         onChange={(e) => setAccount({
                             ...account,
                             firstName: e.target.value
                         })} />
-                    <input value={account.lastName}
+                    <input value={account.lastName} class="form-control mb-2"
+                        placeholder="Last Name"
                         onChange={(e) => setAccount({
                             ...account,
                             lastName: e.target.value
                         })} />
-                    <input value={account.dob}
+                    <input value={account.dob} class="form-control mb-2"
+                        placeholder="Date Of Birth"
                         onChange={(e) => setAccount({
                             ...account,
                             dob: e.target.value
                         })} />
-                    <input value={account.email}
+                    <input value={account.email} class="form-control mb-2"
+                        placeholder="Email"
                         onChange={(e) => setAccount({
                             ...account,
                             email: e.target.value
                         })} />
-                    <select value={account.role}
+                    <select value={account.role} class="custom-select mb-2"
                         onChange={(e) => setAccount({
                             ...account,
                             role: e.target.value
@@ -72,16 +84,14 @@ function Account() {
                         <option value="FACULTY">Faculty</option>
                         <option value="STUDENT">Student</option>
                     </select>
-                    <button onClick={save}>
-                        Save
-                    </button>
-                    <button onClick={signout}>
-                        Signout
-                    </button>
-
-                    <Link to="/Kanbas/Users" className="btn btn-warning w-100">
-                        Users
-                    </Link>
+                    <div className="signup-btn-container mb-2 mt-3">
+                        <button class="btn custom-btn btn-secondary me-4" onClick={save}>
+                            Save
+                        </button>
+                        <button class="btn custom-btn btn-danger me-4" onClick={signout}>
+                            Sign out
+                        </button>
+                    </div>
                 </div>
             )}
         </div>
