@@ -4,10 +4,15 @@ import { useNavigate, Link } from "react-router-dom";
 import "./index.css";
 function Signin() {
     const [credentials, setCredentials] = useState({ username: "", password: "" });
+    const [error, setError] = useState(null);
     const navigate = useNavigate();
     const signin = async () => {
-        await client.signin(credentials);
-        navigate("/Kanbas/Account");
+        const data = await client.signin(credentials);
+        if(data) {
+            navigate("/Kanbas/Account");
+        } else {
+            setError("Incorrect credentials. Unable to Login.");
+        }
     };
     return (
         <div className="signin-container">
@@ -17,6 +22,7 @@ function Signin() {
                     onChange={(e) => setCredentials({ ...credentials, username: e.target.value })} />
                 <input class="form-control mb-4" value={credentials.password} placeholder="Password"
                     onChange={(e) => setCredentials({ ...credentials, password: e.target.value })} />
+                <div className="red-color mb-4">{error ? error : ""}</div>
                 <div className="signup-btn-container">
                     <button class="btn custom-btn btn-secondary me-4" onClick={signin}> Sign In </button>
                     <Link to={`/Signup`}><button class="btn custom-btn btn-danger"> Sign Up </button></Link>
